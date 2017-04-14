@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeverCurrency", "SeverCurrency\SeverCurrency.csproj", "{667F9D35-CA41-4EC8-818B-4639906385EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeverCurrency.Tests", "SeverCurrency.Tests\SeverCurrency.Tests.csproj", "{3DE0DAA9-992B-41CC-8B72-FCB3F11D672D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{667F9D35-CA41-4EC8-818B-4639906385EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{667F9D35-CA41-4EC8-818B-4639906385EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{667F9D35-CA41-4EC8-818B-4639906385EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{667F9D35-CA41-4EC8-818B-4639906385EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE0DAA9-992B-41CC-8B72-FCB3F11D672D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE0DAA9-992B-41CC-8B72-FCB3F11D672D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE0DAA9-992B-41CC-8B72-FCB3F11D672D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE0DAA9-992B-41CC-8B72-FCB3F11D672D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

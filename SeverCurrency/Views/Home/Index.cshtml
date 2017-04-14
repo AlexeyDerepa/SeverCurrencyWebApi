@@ -1,0 +1,75 @@
+﻿<div id="asdf">
+    <p><b>узнать катеровки валют</b></p>
+    <table>
+        <tr><td><input type="hidden" id="editId" /></td><td></td></tr>
+        <tr><td><label>DateStart: </label></td><td><input type="date" id="DateStart" value="19920610" /></td></tr>
+        <tr><td><label>DateEnd: </label></td><td><input type="date" id="DateEnd" value="19920624" /></td></tr>
+        <tr><td><label>Mode: </label></td><td><input type="text" id="Mode" value="average_value_1" /></td></tr>
+    </table>
+    <button id="editBook">Запрос</button>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+
+            $("#editBook").click(function (event) {
+                event.preventDefault();
+                EditBook();
+            });
+
+            $("#addBook").click(function (event) {
+                event.preventDefault();
+                AddBook();
+            });
+
+        });
+        // Добавление новой книги
+        function AddBook() {
+            // получаем значения для добавляемой книги
+            var book = {
+                Name: $('#addName').val(),
+                Author: $('#addAuthor').val(),
+                Year: $('#addYear').val()
+            };
+
+            $.ajax({
+                url: '/api/values/',
+                type: 'POST',
+                data: JSON.stringify(book),
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    GetAllBooks();
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+        // редактирование книги
+        function EditBook() {
+            var id = 1;
+            // получаем новые значения для редактируемой книги
+            var book = {
+                DateStart: $('#DateStart').val(),
+                DateEnd: $('#DateEnd').val(),
+                Mode: $('#Mode').val()
+            };
+            $.ajax({
+                url: '/api/values/' + id,
+                type: 'PUT',
+                data: JSON.stringify(book),
+                contentType: "application/json;charset=utf-8",
+                success: function (data) {
+                    alert(data);
+                },
+                error: function (x, y, z) {
+                    alert(x + '\n' + y + '\n' + z);
+                }
+            });
+        }
+
+    </script>
+}
